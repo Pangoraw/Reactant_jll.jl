@@ -1,40 +1,40 @@
 [[Reactant]]
 arch = "x86_64"
 cxxstring_abi = "cxx03"
-git-tree-sha1 = "720b891f6c27e33c426fe20383833d059a6affc3"
+git-tree-sha1 = "2d0b0de3817a630c9239130618778dd86e030af4"
 lazy = true
 libc = "glibc"
 os = "linux"
 
     [[Reactant.download]]
-    sha256 = "a9af9ef5f43515eff3bb04a6eca2b4750b12256554bd0f79d544debe65d43c2f"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.7+0/Reactant.v0.0.7.x86_64-linux-gnu-cxx03.tar.gz"
+    sha256 = "9382fa1442b45280f3053213bd772d703904156a59d94d7d0a1a988804a028d3"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.8+0/Reactant.v0.0.8.x86_64-linux-gnu-cxx03.tar.gz"
 [[Reactant]]
 arch = "x86_64"
 cxxstring_abi = "cxx11"
-git-tree-sha1 = "bbc6857ea2ae7ee8a266e76db42fc0ba94323bee"
+git-tree-sha1 = "d6c9f14a4dfc36b4ce635ff9a9497515b0016db6"
 lazy = true
 libc = "glibc"
 os = "linux"
 
     [[Reactant.download]]
-    sha256 = "bc51e6d53713db991398375abcb09dbf3213d158cb18da78e2b60f47a04ff9a9"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.7+0/Reactant.v0.0.7.x86_64-linux-gnu-cxx11.tar.gz"
+    sha256 = "d503c26f49fc71e98b7eeda94e12d325e3a724af053e441115c054300abf89b2"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.8+0/Reactant.v0.0.8.x86_64-linux-gnu-cxx11.tar.gz"
 [[Reactant]]
 arch = "x86_64"
-git-tree-sha1 = "18f83a2c89721bf56c48d172d75b6819b018dd39"
+git-tree-sha1 = "552992b86967f117dc56ac0b1a862bfec1126159"
 lazy = true
 os = "macos"
 
     [[Reactant.download]]
-    sha256 = "cc81013497885bb7c9e2abc55d425ae16bc26afe499a100dcd1a6fe546a380c6"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.7+0/Reactant.v0.0.7.x86_64-apple-darwin.tar.gz"
+    sha256 = "76d35c1c98ea75c350ab7e8166bec7064e2c67775248d978151bbd89e2916ff7"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.8+0/Reactant.v0.0.8.x86_64-apple-darwin.tar.gz"
 [[Reactant]]
 arch = "aarch64"
-git-tree-sha1 = "dc66473f6136dd81947f23dbba72461f22a0a44c"
+git-tree-sha1 = "98d69a2b0245ac3c1646fd4cf69ab74260ab25f7"
 lazy = true
 os = "macos"
 
     [[Reactant.download]]
-    sha256 = "4324f4889ba098347a956c12b97338c8752fd914e0fd03a28779ea4bb4c843a9"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.7+0/Reactant.v0.0.7.aarch64-apple-darwin.tar.gz"
+    sha256 = "e0f214137869f4cc86a420f50ee7108151eba3a8e2e4809f77b54907210674e7"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.8+0/Reactant.v0.0.8.aarch64-apple-darwin.tar.gz"
