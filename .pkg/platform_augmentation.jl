@@ -1,5 +1,11 @@
 using Base.BinaryPlatforms
 
+const Reactant_UUID = Base.UUID("3c362404-f566-11ee-1572-e11a4b42c853")
+const preferences = Base.get_preferences(Reactant_UUID)
+
+module __CUDA
+    using Base.BinaryPlatforms
+
 try
     using CUDA_Runtime_jll
 catch
@@ -59,6 +65,18 @@ function augment_platform!(platform::Platform)
         CUDA_Runtime_jll.augment_platform!(platform)
     end
     BinaryPlatforms.set_compare_strategy!(platform, "cuda", cuda_comparison_strategy)
+
+    return platform
+end
+end
+
+function augment_platform!(platform::Platform)
+    __CUDA.augment_platform!(platform)
+
+    mode = get(ENV, "REACTANT_MODE", get(preferences, "mode", "opt"))
+    if !haskey(platform, "mode")
+        platform["mode"] = mode
+    end
 
     return platform
 end
