@@ -1,26 +1,26 @@
 [[Reactant]]
 arch = "x86_64"
 cxxstring_abi = "cxx03"
-git-tree-sha1 = "c2d7b094a8ebf9e23847bd77e6e81977706e56db"
+git-tree-sha1 = "392cc3d6c6983a64a8b1bb85fd94fe91eaf0eaef"
 lazy = true
 libc = "glibc"
 mode = "opt"
 os = "linux"
 
     [[Reactant.download]]
-    sha256 = "5cb5ca35df46d41177c841c7795be2d66bd7e37cfa379855d49533cde64cc1de"
+    sha256 = "4b03079d54beb18d248032ba5971b54f57af37065dd4071d7894172ea2df96c4"
     url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.16+0/Reactant.v0.0.16.x86_64-linux-gnu-cxx03-mode+opt.tar.gz"
 [[Reactant]]
 arch = "x86_64"
 cxxstring_abi = "cxx11"
-git-tree-sha1 = "77a38d673ba4b83698bfef30d0764b0a7e43294e"
+git-tree-sha1 = "611fc838f86f2ef465d37018ae66ff87d9714775"
 lazy = true
 libc = "glibc"
 mode = "opt"
 os = "linux"
 
     [[Reactant.download]]
-    sha256 = "138c79f2a9b8b9f9aac7adaefeca5d5a6ea6243436b476a098e9d8ea5815b405"
+    sha256 = "9a13b9a81efa0a32f1eea471403631447a12cc4813ca9d671c3614fe1c48008a"
     url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.16+0/Reactant.v0.0.16.x86_64-linux-gnu-cxx11-mode+opt.tar.gz"
 [[Reactant]]
 arch = "x86_64"
