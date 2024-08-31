@@ -14,8 +14,8 @@ else
     nothing
 end
 
-module __CUDA
-    using Base.BinaryPlatforms
+#module __CUDA
+#    using Base.BinaryPlatforms
 
 try
     using CUDA_Runtime_jll
@@ -79,10 +79,10 @@ function augment_platform!(platform::Platform)
 
     return platform
 end
-end
+#end
 
 function augment_platform!(platform::Platform)
-    __CUDA.augment_platform!(platform)
+    #__CUDA.augment_platform!(platform)
 
     mode = get(ENV, "REACTANT_MODE", something(mode_preference, "opt"))
     if !haskey(platform, "mode")
