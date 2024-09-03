@@ -34,7 +34,7 @@
             platform["mode"] = mode
         end
         	
-	gpu = something(mode_preference, "gpu")
+	gpu = something(gpu_preference, "none")
 
 	cuname = if Sys.iswindows()
             Libdl.find_library("nvcuda")
@@ -54,7 +54,7 @@
 	    gpu = "cuda"
         end
 	
-	roname = "none"
+	roname = ""
         # if we've found a system driver, put a dependency on it,
         # so that we get recompiled if the driver changes.
         if roname != "" && gpu == "none"
