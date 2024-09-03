@@ -1,5 +1,5 @@
     using Base.BinaryPlatforms
-
+    using Libdl
     const Reactant_UUID = Base.UUID("0192cb87-2b54-54ad-80e0-3be72ad8a3c0")
     const preferences = Base.get_preferences(Reactant_UUID)
     Base.record_compiletime_preference(Reactant_UUID, "mode")
