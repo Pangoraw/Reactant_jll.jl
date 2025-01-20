@@ -6,10 +6,11 @@ Base.record_compiletime_preference(Reactant_UUID, "mode")
 Base.record_compiletime_preference(Reactant_UUID, "gpu")
 
 const mode_preference = if haskey(preferences, "mode")
-    if isa(preferences["mode"], String) && preferences["mode"] in ["opt", "dbg"]
+    expected = ("opt", "dbg")
+    if isa(preferences["mode"], String) && preferences["mode"] in expected
         preferences["mode"]
     else
-        @error "Mode preference is not valid; expected 'opt' or 'dbg', but got '$(preferences["debug"])'"
+        @error "Mode preference is not valid; expected $(join(expected, ", ", ", or ")), but got '$(preferences["debug"])'"
         nothing
     end
 else
@@ -17,10 +18,23 @@ else
 end
 
 const gpu_preference = if haskey(preferences, "gpu")
-if isa(preferences["gpu"], String) && preferences["gpu"] in ["none", "cuda", "rocm"]
+    expected = ("none", "cuda", "rocm")
+    if isa(preferences["gpu"], String) && preferences["gpu"] in expected
         preferences["gpu"]
     else
-        @error "GPU preference is not valid; expected 'none', 'cuda' or 'rocm', but got '$(preferences["debug"])'"
+        @error "GPU preference is not valid; expected $(join(expected, ", ", ", or ")), but got '$(preferences["gpu"])'"
+        nothing
+    end
+else
+    nothing
+end
+
+const cuda_version_preference = if haskey(preferences, "cuda_version")
+    expected = ("none", "12.1", "12.6")
+    if isa(preferences["cuda_version"], String) && preferences["cuda_version"] in expected
+        preferences["cuda_version"]
+    else
+        @error "CUDA version preference is not valid; expected $(join(expected, ", ", ", or ")), but got '$(preferences["cuda_version"])'"
         nothing
     end
 else
@@ -58,6 +72,8 @@ function augment_platform!(platform::Platform)
     # user explicitly asked for no GPU in the preferences.
     gpu = something(gpu_preference, "undecided")
 
+    cuda_version_tag = something(cuda_version_preference, "none")
+
     # Don't do GPU discovery on platforms for which we don't have GPU builds.
     # Keep this in sync with list of platforms for which we actually build with GPU support.
     if !(Sys.isapple(platform) || (Sys.islinux(platform) && arch(platform) == "aarch64"))
@@ -72,19 +88,24 @@ function augment_platform!(platform::Platform)
         # so that we get recompiled if the driver changes.
         if cuname != "" && gpu == "undecided"
             handle = Libdl.dlopen(cuname)
-            cuda_version = cuDriverGetVersion(handle)
+            current_cuda_version = cuDriverGetVersion(handle)
             path = Libdl.dlpath(handle)
             Libdl.dlclose(handle)
 
-            if cuda_version isa VersionNumber
-                min_cuda_version = v"12.3"
-                if cuda_version >= min_cuda_version
-                    @debug "Adding include dependency on $path"
-                    Base.include_dependency(path)
-                    gpu = "cuda"
+            if cuda_version_tag == "none" && current_cuda_version isa VersionNumber
+                if v"12.1" <= current_cuda_version < v"12.6"
+                    cuda_version_tag = "12.1"
+                elseif v"12.6" <= current_cuda_version < v"13"
+                    cuda_version_tag = "12.6"
                 else
-                    @debug "CUDA version $(cuda_version) in $(path) not supported with this version of Reactant (min: $(min_cuda_version))"
+                    @debug "CUDA version $(current_cuda_version) in $(path) not supported with this version of Reactant"
                 end
+            end
+
+            if cuda_version_tag != "none"
+                @debug "Adding include dependency on $(path)"
+                Base.include_dependency(path)
+                gpu = "cuda"
             end
         end
 
@@ -96,7 +117,7 @@ function augment_platform!(platform::Platform)
             path = Libdl.dlpath(handle)
             Libdl.dlclose(handle)
 
-            @debug "Adding include dependency on $path"
+            @debug "Adding include dependency on $(path)"
             Base.include_dependency(path)
             gpu = "rocm"
         end
@@ -114,5 +135,11 @@ function augment_platform!(platform::Platform)
         platform["gpu"] = gpu
     end
 
+    gpu = get(ENV, "REACTANT_CUDA_VERSION", cuda_version_tag)
+    if !haskey(platform, "cuda_version")
+        platform["cuda_version"] = cuda_version_tag
+    end
+
     return platform
 end
+
