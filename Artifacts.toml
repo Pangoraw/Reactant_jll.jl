@@ -11,7 +11,7 @@ os = "linux"
 
     [[Reactant.download]]
     sha256 = "ef4ff7dfed66c8af8fb15126d5082dd9ec1bd11c9216ece86ebc3cbe3ed25a05"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.x86_64-linux-gnu-cxx11-cuda_version+none-gpu+none-mode+opt.tar.gz"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.x86_64-linux-gnu-cxx11-cuda_version+none-gpu+none-mode+opt.tar.gz"
 [[Reactant]]
 arch = "aarch64"
 cuda_version = "none"
@@ -25,7 +25,7 @@ os = "linux"
 
     [[Reactant.download]]
     sha256 = "68617412bc00ec3efcd7f3364c14b56d84aefea9b880c4eddc82c646d944741e"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.aarch64-linux-gnu-cxx11-cuda_version+none-gpu+none-mode+opt.tar.gz"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.aarch64-linux-gnu-cxx11-cuda_version+none-gpu+none-mode+opt.tar.gz"
 [[Reactant]]
 arch = "x86_64"
 cuda_version = "none"
@@ -37,7 +37,7 @@ os = "macos"
 
     [[Reactant.download]]
     sha256 = "168584048a826617d6158818902d4767e9c56d718bdff0780e9076a2c5524777"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.x86_64-apple-darwin-cuda_version+none-gpu+none-mode+opt.tar.gz"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.x86_64-apple-darwin-cuda_version+none-gpu+none-mode+opt.tar.gz"
 [[Reactant]]
 arch = "aarch64"
 cuda_version = "none"
@@ -49,7 +49,7 @@ os = "macos"
 
     [[Reactant.download]]
     sha256 = "893dd220225deb79a9564e9163c4779e8570940d4021224472b3744312492fe9"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.aarch64-apple-darwin-cuda_version+none-gpu+none-mode+opt.tar.gz"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.aarch64-apple-darwin-cuda_version+none-gpu+none-mode+opt.tar.gz"
 [[Reactant]]
 arch = "x86_64"
 cuda_version = "none"
@@ -61,7 +61,7 @@ os = "macos"
 
     [[Reactant.download]]
     sha256 = "7d505611e836b8005400afa016395727d94a48ff6c016d01c3dd343e224c7027"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.x86_64-apple-darwin-cuda_version+none-gpu+none-mode+dbg.tar.gz"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.x86_64-apple-darwin-cuda_version+none-gpu+none-mode+dbg.tar.gz"
 [[Reactant]]
 arch = "aarch64"
 cuda_version = "none"
@@ -73,12 +73,12 @@ os = "macos"
 
     [[Reactant.download]]
     sha256 = "5245bc934410311451523e102a7077ab3ddb0a1e0705c725d2cb312ffc2084f5"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.aarch64-apple-darwin-cuda_version+none-gpu+none-mode+dbg.tar.gz"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.aarch64-apple-darwin-cuda_version+none-gpu+none-mode+dbg.tar.gz"
 [[Reactant]]
 arch = "x86_64"
 cuda_version = "12.1"
 cxxstring_abi = "cxx11"
-git-tree-sha1 = "cdb4f20067cc2d97beff8bb166b75a71ef300805"
+git-tree-sha1 = "0d878fd6ade566dca90dd6af3aba5137711ac308"
 gpu = "cuda"
 lazy = true
 libc = "glibc"
@@ -86,13 +86,27 @@ mode = "opt"
 os = "linux"
 
     [[Reactant.download]]
-    sha256 = "36a08260d1607abc4a15f43fcf32b753a9bf17dd727086a773b79ec41166cf40"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.x86_64-linux-gnu-cxx11-cuda_version+12.1-gpu+cuda-mode+opt.tar.gz"
+    sha256 = "72ef45e1a0d9c18e3f0786b87afed0f09f3d5476b0d03eaa01243bc4ad88eee3"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.x86_64-linux-gnu-cxx11-cuda_version+12.1-gpu+cuda-mode+opt.tar.gz"
+[[Reactant]]
+arch = "x86_64"
+cuda_version = "12.3"
+cxxstring_abi = "cxx11"
+git-tree-sha1 = "b52ecf1dc03f7d137057927f9b2af78ed1d0121f"
+gpu = "cuda"
+lazy = true
+libc = "glibc"
+mode = "opt"
+os = "linux"
+
+    [[Reactant.download]]
+    sha256 = "9f88560e41e9d22fcd941a99b398209ed1e04e885872500531f416460c52fdc9"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.x86_64-linux-gnu-cxx11-cuda_version+12.3-gpu+cuda-mode+opt.tar.gz"
 [[Reactant]]
 arch = "x86_64"
 cuda_version = "12.6"
 cxxstring_abi = "cxx11"
-git-tree-sha1 = "42344db5880446c0f2bb04d62771c61c52ac64e5"
+git-tree-sha1 = "170ce45d194c1f99fdf490cddf8ca7f7daceb1a4"
 gpu = "cuda"
 lazy = true
 libc = "glibc"
@@ -100,5 +114,5 @@ mode = "opt"
 os = "linux"
 
     [[Reactant.download]]
-    sha256 = "fd6e28e118626b6b2db6108dbf42573bb519f1f533dcf27a1cfa06ca86eb7459"
-    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.47+0/Reactant.v0.0.47.x86_64-linux-gnu-cxx11-cuda_version+12.6-gpu+cuda-mode+opt.tar.gz"
+    sha256 = "d19a2899c4e5c0a5aaf089a1db87817af1f11362967376b815e53040af80951e"
+    url = "https://github.com/JuliaBinaryWrappers/Reactant_jll.jl/releases/download/Reactant-v0.0.48+0/Reactant.v0.0.48.x86_64-linux-gnu-cxx11-cuda_version+12.6-gpu+cuda-mode+opt.tar.gz"
