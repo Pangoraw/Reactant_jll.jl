@@ -9,7 +9,7 @@ function __init__()
     JLLWrappers.@init_library_product(
         libReactantExtra,
         "lib/libReactantExtra.so",
-        RTLD_GLOBAL | RTLD_DEEPBIND,
+        RTLD_LAZY | RTLD_DEEPBIND,
     )
 
     JLLWrappers.@generate_init_footer()
