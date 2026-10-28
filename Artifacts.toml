@@ -144,3 +144,17 @@ os = "linux"
     [[Reactant.download]]
     sha256 = "139f54868c721438f85dd7b30feb528642ef7f79090717ca54550ee4fd9e0372"
     url = "https://github.com/Pangoraw/Reactant_jll.jl/releases/download/Reactant-v0.0.131+1/Reactant.v0.0.131.x86_64-linux-gnu-cxx11-cuda_version+none-gpu+none-mode+opt.tar.gz"
+[[Reactant]]
+arch = "x86_64"
+cxxstring_abi = "cxx11"
+git-tree-sha1 = "b09039fff06d8da5f27a4daa0878b6e6da840063"
+gpu = "cuda"
+gpu_version = "12.9"
+lazy = true
+libc = "glibc"
+mode = "opt"
+os = "linux"
+
+    [[Reactant.download]]
+    sha256 = "9be23223081e2dc214dd5a637a1ea56bba78bc66283cc436efa2958dc0d58f2c"
+    url = "https://github.com/Pangoraw/Reactant_jll.jl/releases/download/Reactant-v0.0.435+0/Reactant.v0.0.435.x86_64-linux-gnu-cxx11-gpu_version+12.9-gpu+cuda-mode+opt.tar.xz"

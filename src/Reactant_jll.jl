@@ -7,5 +7,5 @@ Base.include(@__MODULE__, joinpath("..", ".pkg", "platform_augmentation.jl"))
 import JLLWrappers
 
 JLLWrappers.@generate_main_file_header("Reactant")
-JLLWrappers.@generate_main_file("Reactant", UUID("0192cb87-2b54-54ad-80e0-3be72ad8a3c0"))
+JLLWrappers.@generate_main_file("Reactant", Base.UUID("0192cb87-2b54-54ad-80e0-3be72ad8a3c0"))
 end  # module Reactant_jll
