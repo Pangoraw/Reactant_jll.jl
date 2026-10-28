@@ -11,4 +11,4 @@ os = "linux"
 
     [[Reactant.download]]
     sha256 = "30260d552e9816dccd2af8bed9437183f39744eb770b7154f05e19af56fe55a8"
-    url = "https://github.com/Pangoraw/Reactant_jll.jl/releases/download/Reactant-v0.0.435+0/Reactant.v0.0.435.x86_64-linux-gnu-cxx11-gpu_version+12.9-gpu+cuda-mode+opt.tar.xz"
+    url = "https://github.com/Pangoraw/Reactant_jll.jl/releases/download/Reactant-v0.0.435+1/Reactant.v0.0.435.x86_64-linux-gnu-cxx11-gpu_version+12.9-gpu+cuda-mode+opt.tar.xz"
